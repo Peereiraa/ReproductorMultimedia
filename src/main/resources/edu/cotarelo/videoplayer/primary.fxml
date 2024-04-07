@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+
+<BorderPane fx:id="root" prefHeight="810.0" prefWidth="1201.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.cotarelo.videoplayer.PrimaryController">
+
+    <bottom>
+        <VBox prefHeight="103.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Slider fx:id="sliderTiempo" onTouchMoved="#selectMielda" HBox.hgrow="ALWAYS">
+                            <padding>
+                                <Insets left="50.0" right="50.0" />
+                            </padding>
+                        </Slider>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <children>
+                  <HBox prefWidth="310.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <FontAwesomeIcon fx:id="btnPlay" fill="WHITE" iconName="PLAY" onMouseClicked="#play" selectionStart="0" size="2em" styleClass="icon" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <FontAwesomeIcon fx:id="btnStop" fill="WHITE" iconName="PAUSE" onMouseClicked="#stop" selectionStart="0" size="2em" styleClass="icon" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <FontAwesomeIcon fx:id="btnReset" fill="WHITE" iconName="STOP" onMouseClicked="#reset" selectionStart="0" size="2em" styleClass="icon" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <FontAwesomeIcon fill="WHITE" iconName="MICROPHONE" size="2em">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Slider fx:id="sliderVolume">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Slider>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="402.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <CheckBox fx:id="checkBoxRandom" mnemonicParsing="false" onAction="#reproducirAleatoriamente" styleClass="checkbox" text="Aleatorio">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </CheckBox>
+                        <FontAwesomeIcon fill="WHITE" iconName="BACKWARD" onMouseClicked="#videoanterior" size="2em" styleClass="icon">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <FontAwesomeIcon fill="WHITE" iconName="FORWARD" onMouseClicked="#videosiguiente" size="2em" styleClass="icon">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </HBox>
+                    </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="55.0" />
+               </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Label fx:id="lbDuration" alignment="CENTER" contentDisplay="CENTER" text="00:00">
+                            <HBox.margin>
+                                <Insets right="15.0" />
+                            </HBox.margin>
+                            <padding>
+                                <Insets top="5.0" />
+                            </padding>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </Label>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <padding>
+                        <Insets top="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+        </VBox>
+    </bottom>
+    <top>
+        <HBox alignment="CENTER" prefHeight="35.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label id="titleLabel" prefHeight="47.0" prefWidth="382.0" text="REPRODUCTOR SIMPLEAUDIO">
+               <HBox.margin>
+                  <Insets bottom="10.0" />
+               </HBox.margin></Label>
+            </children>
+        </HBox>
+    </top>
+    <center>
+      <HBox fx:id="hbox" alignment="CENTER" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+              <MediaView fx:id="elMediaView" nodeOrientation="INHERIT" preserveRatio="true" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+    </center>
+   <right>
+      <VBox BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="10.0" />
+         </BorderPane.margin>
+         <children>
+            <HBox>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="179.0">
+                     <children>
+                        <FontAwesomeIcon fx:id="btnSelect" fill="WHITE" iconName="DOWNLOAD" onMouseClicked="#selectMielda" selectionStart="0" size="2em" styleClass="icon" textAlignment="CENTER" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Button fx:id="btnEliminar" mnemonicParsing="false" onMouseClicked="#onClickEliminar" styleClass="transparent-button">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" iconName="TRASH" size="2em" styleClass="icon" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <ListView fx:id="listView" onDragDropped="#soltarVideo" onDragEntered="#dragEntered" onDragExited="#dragExited" onDragOver="#arrastrarVideo" onMouseClicked="#reproducirVideoSeleccionado" prefHeight="679.0" prefWidth="200.0" styleClass="custom-list-view" />
+         </children>
+      </VBox>
+   </right>
+   <left>
+      <Pane prefHeight="650.0" prefWidth="18.0" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

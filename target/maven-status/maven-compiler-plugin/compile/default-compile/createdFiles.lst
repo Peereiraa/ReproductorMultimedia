@@ -1,0 +1,8 @@
+edu\cotarelo\videoplayer\modelo\Video.class
+edu\cotarelo\videoplayer\modelo\Multimedia.class
+module-info.class
+edu\cotarelo\videoplayer\modelo\Reproductor.class
+edu\cotarelo\videoplayer\modelo\Audio.class
+edu\cotarelo\videoplayer\PrimaryController.class
+edu\cotarelo\videoplayer\App.class
+edu\cotarelo\videoplayer\modelo\Lista.class

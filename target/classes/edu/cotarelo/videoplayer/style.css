@@ -1,0 +1,146 @@
+
+#root {
+    -fx-background-color: #000;
+}
+
+
+#bottom {
+    -fx-background-color: #111; 
+    -fx-padding: 10;
+    -fx-spacing: 10;
+}
+
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+
+.slider .track {
+   
+    -fx-control-inner-background: red; 
+    -fx-accent: #ff0000; 
+}
+
+
+#center {
+    -fx-background-color: #000;
+}
+
+
+#elMediaView {
+    -fx-alignment: center;
+}
+
+
+#lbDuration {
+    -fx-text-fill: #fff; 
+    -fx-font-size: 18px; 
+    -fx-padding: 5px 10px; 
+    -fx-background-color: #444; 
+    -fx-border-radius: 5px; 
+}
+
+
+#titleLabel {
+    -fx-font-size: 24px; 
+    -fx-font-weight: bold; 
+    -fx-text-fill: #fff; 
+    -fx-padding: 10px; 
+    -fx-background-color: #000; 
+    -fx-font-family: "Arial";
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 5, 0.5, 0, 0); 
+}
+
+
+#root > .top > HBox {
+    -fx-alignment: CENTER;
+}
+
+.icon {
+    -fx-font-family: FontAwesome; 
+    -fx-font-size: 24px; 
+    -fx-text-fill: white; 
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.5, 0, 0); 
+    -fx-padding: 8px; 
+}
+
+.icon:hover {
+    -fx-fill: red; 
+    -fx-cursor: hand; 
+}
+
+
+#listView.custom-list-view {
+    -fx-background-color: #333; /* Cambia el color de fondo de la lista a gris claro */
+    -fx-text-fill: white; /* Cambia el color del texto a gris oscuro */
+}
+
+#listView.custom-list-view .list-cell {
+    -fx-background-color: #243038; /* Cambia el color de fondo de las celdas de la lista a gris más claro */
+    -fx-padding: 10px;
+    -fx-text-fill: white;
+}
+
+#listView.custom-list-view .list-cell:selected {
+    -fx-background-color: #E55F5A;
+    -fx-text-fill: #000;/* Cambia el color de fondo de las celdas seleccionadas a un gris aún más oscuro */
+}
+
+#listView.custom-list-view .scroll-bar {
+    -fx-background-color: #f0f0f0; /* Cambia el color de fondo de la barra de desplazamiento a gris claro */
+}
+
+#listView.custom-list-view .scroll-bar .thumb {
+    -fx-background-color: #c0c0c0; /* Cambia el color del pulgar de la barra de desplazamiento a un gris más oscuro */
+}
+
+#listView.custom-list-view .scroll-bar .track {
+    -fx-background-color: #e0e0e0; /* Cambia el color del riel de la barra de desplazamiento a un gris claro */
+}
+
+#listView.custom-list-view .scroll-bar .increment-button,
+#listView.custom-list-view .scroll-bar .decrement-button {
+    -fx-background-color: #e0e0e0; /* Cambia el color de los botones de incremento y decremento a un gris claro */
+    -fx-shape: "M 4 0 L 0 2 L 4 4 Z";
+}
+
+#listView.custom-list-view .scroll-bar .increment-button:hover,
+#listView.custom-list-view .scroll-bar .decrement-button:hover {
+    -fx-background-color: #d0d0d0; /* Cambia el color de fondo de los botones de incremento y decremento cuando se pasa el ratón sobre ellos */
+}
+
+
+
+.checkbox {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff; 
+}
+
+.checkbox .box {
+    -fx-background-color: #1e1e1e;
+}
+
+.checkbox .box .mark {
+    -fx-background-color: #3e3e3e; 
+}
+
+.checkbox:selected .box .mark {
+    -fx-background-color: #4682b4; 
+}
+
+.transparent-button {
+    -fx-background-color: transparent; 
+}
+
+#listView.custom-list-view:drag-over {
+    -fx-background-color: #00ff00; /* Cambia el color de fondo de la lista cuando se arrastra sobre ella */
+}
+
+#listView.custom-list-view:drag-entered {
+    -fx-background-color: #00ff00; /* Cambia el color de fondo de la lista cuando se entra arrastrando sobre ella */
+}
+
+#listView.custom-list-view:drag-exited {
+    -fx-background-color: #333; /* Cambia el color de fondo de la lista cuando se sale arrastrando sobre ella */
+}
